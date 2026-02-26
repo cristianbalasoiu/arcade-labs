@@ -9,11 +9,15 @@ def extraer_pregunta (pregunta: str) -> dict:
     lista = []
     lista += pregunta.split("|")
 
-   return {"pregunta": "lista[0]",
+    if len(lista) < 2: raise ValueError("Faltan partes: se necesita 'pregunta|correcta|opciones...'")
+
+    return {"pregunta": lista[0],
            
-           "correcta": "lista[1]",
+           "correcta": lista[1],
            
-           "opciones": "lista[2:]"}
+           "opciones": lista[2:]}
+
+
 
 
     

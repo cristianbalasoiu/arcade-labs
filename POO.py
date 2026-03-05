@@ -21,7 +21,7 @@ if __name__ == '__main__' :
     lista_habitaciones.append(habitacion_0)
 
     habitacion_1 = Habitacion()
-    habitacion_1.descripcion = "Estas en el pasillo que conecta tu habitación con el salón y con otro pasilo, el cual está un poco oscuro\nHay habitaciones al este, oeste y norte\n En que dirección quieres ir?"
+    habitacion_1.descripcion = "Estas en el pasillo que conecta tu habitación con el salón y con otro pasilo, el cual está un poco oscuro\nHay habitaciones al este, oeste y norte"
     habitacion_1.norte = 4
     habitacion_1.sur = None
     habitacion_1.este = 2
@@ -81,7 +81,7 @@ if __name__ == '__main__' :
     while not salir:
         print()
         print (lista_habitaciones[habitacion_actual].descripcion)
-        direccion = input(print("¿En que dirección quieres ir?"))
+        direccion = input(print("¿En que dirección quieres ir?: "))
 
         if direccion.lower() == 'n' or direccion.lower == 'norte':
             siguiente_habitacion = lista_habitaciones[habitacion_actual].norte

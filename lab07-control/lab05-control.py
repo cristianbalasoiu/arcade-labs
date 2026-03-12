@@ -46,17 +46,12 @@ class MiJuego(arcade.Window):
 
         self.x1_luna = 140
         self.y1_luna = 470 
-        
-
-
-
-    
 
     def on_draw(self):
         self.clear()
 
         #ESTRELLAS Y LUNA 
-        arcade.draw_circle_filled(140, 470, 90, arcade.color.ASH_GREY)
+        arcade.draw_circle_filled(self.x1_luna, self.y1_luna, 90, arcade.color.ASH_GREY)
         arcade.draw_points(self.puntos, arcade.color.WHITE, 2)
         #CUERPO DEL MOTOR
         arcade.draw_lrbt_rectangle_filled(self.x1_motor_cuerpo, self.x2_motor_cuerpo, self.y1_motor_cuerpo, self.y2_motor_cuerpo, arcade.color.GHOST_WHITE)
@@ -106,7 +101,17 @@ class MiJuego(arcade.Window):
         self.x2_fuego2 += dx
         self.y2_fuego2 += dy
 
-        
+    def on_key_press(self, key, modifiers):
+        velocidad = 50
+        if key == arcade.key.UP:
+            self.y1_luna += velocidad
+        elif key == arcade.key.DOWN:
+            self.y1_luna -= velocidad
+        elif key == arcade.key.LEFT:
+            self.x1_luna -= velocidad
+        elif key == arcade.key.RIGHT:
+            self.x1_luna += velocidad
+
 
 if __name__ == "__main__":
     juego = MiJuego()

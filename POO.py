@@ -81,30 +81,30 @@ if __name__ == '__main__' :
     while not salir:
         print()
         print (lista_habitaciones[habitacion_actual].descripcion)
-        direccion = input(print("¿En que dirección quieres ir?: "))
+        direccion = input("¿En que dirección quieres ir?: ")
 
-        if direccion.lower() == 'n' or direccion.lower == 'norte':
+        if direccion.lower() == 'n' or direccion.lower() == 'norte':
             siguiente_habitacion = lista_habitaciones[habitacion_actual].norte
             if siguiente_habitacion == None:
                 print("No puedes ir en esa dirección")
             else:
                 habitacion_actual = siguiente_habitacion
 
-        elif  direccion.lower() == 's' or direccion.lower == 'sur':
+        elif  direccion.lower() == 's' or direccion.lower() == 'sur':
             siguiente_habitacion = lista_habitaciones[habitacion_actual].sur
             if siguiente_habitacion == None:
                 print("No puedes ir en esa dirección")
             else:
                 habitacion_actual = siguiente_habitacion
 
-        elif direccion.lower() == 'o' or direccion.lower == 'oeste':
+        elif direccion.lower() == 'o' or direccion.lower() == 'oeste':
             siguiente_habitacion = lista_habitaciones[habitacion_actual].oeste
             if siguiente_habitacion == None:
                 print("No puedes ir en esa dirección")
             else:
                 habitacion_actual = siguiente_habitacion 
 
-        elif direccion.lower() == 'e' or direccion.lower == 'este':
+        elif direccion.lower() == 'e' or direccion.lower() == 'este':
             siguiente_habitacion = lista_habitaciones[habitacion_actual].este
             if siguiente_habitacion == None:
                 print("No puedes ir en esa dirección")
@@ -113,11 +113,12 @@ if __name__ == '__main__' :
         else: 
             print ("No se ha entendido muy bien hacia donde quieres ir")
 
-        fin = input (print("Indica si quieres salir del juego (si/no): "))
+        fin = input ("Indica si quieres salir del juego (si/no): ")
         if fin.lower() == 'no':
             salir = False
         else:
-            salir == True
+            print("Gracias por jugar!!")
+            salir = True
         
 
 

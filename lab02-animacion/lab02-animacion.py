@@ -35,3 +35,4 @@ class MiJuego(arcade.Window):
 if __name__ == "__main__":
     juego = MiJuego()
     arcade.run()
+

@@ -2,8 +2,7 @@ import arcade
 from menu import MenuPrincipal
 
 def main():
-    # Crear ventana en pantalla completa
-    window = arcade.Window(fullscreen=True, title="Juego")
+    window = arcade.Window(800, 600, title="Juego")
 
     menu = MenuPrincipal()
     window.show_view(menu)

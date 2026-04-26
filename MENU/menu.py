@@ -5,20 +5,15 @@ class MenuPrincipal(arcade.View):
 
     def __init__(self):
         super().__init__()
-
-        # Cargar fondo
-        self.fondo = arcade.load_texture("assets/fondos/fondo.png")
-
-        # Botones
         self.botones = []
 
     def on_show(self):
-        arcade.set_background_color(arcade.color.BLACK)
+        # Fondo negro base
+        arcade.set_background_color((10, 10, 10))
 
         ancho = self.window.width
         alto = self.window.height
 
-        # Crear botones centrados
         self.botones = [
             Boton(ancho/2 - 150, alto/2 + 50, 300, 60, "JUGAR"),
             Boton(ancho/2 - 150, alto/2 - 30, 300, 60, "HISTORIA"),
@@ -27,21 +22,6 @@ class MenuPrincipal(arcade.View):
 
     def on_draw(self):
         self.clear()
-
-        # Dibujar fondo a pantalla completa
-        arcade.draw_lrwh_rectangle_textured(
-            0, 0,
-            self.window.width,
-            self.window.height,
-            self.fondo
-        )
-
-        # Oscurecer un poco (como en tu imagen)
-        arcade.draw_lrtb_rectangle_filled(
-            0, self.window.width,
-            self.window.height, 0,
-            (0, 0, 0, 120)
-        )
 
         # Título
         arcade.draw_text(
@@ -53,7 +33,7 @@ class MenuPrincipal(arcade.View):
             anchor_x="center"
         )
 
-        # Dibujar botones
+        # Botones
         for boton in self.botones:
             boton.dibujar()
 

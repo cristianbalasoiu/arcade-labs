@@ -6,10 +6,10 @@ class MenuPrincipal(arcade.View):
     def __init__(self):
         super().__init__()
         self.botones = []
+        arcade.set_background_color(arcade.color.DARK_RED)
+        
 
     def on_show(self):
-        # Fondo negro base
-        arcade.set_background_color((10, 10, 10))
 
         ancho = self.window.width
         alto = self.window.height
@@ -23,6 +23,7 @@ class MenuPrincipal(arcade.View):
     def on_draw(self):
         self.clear()
 
+
         # Título
         arcade.draw_text(
             "MUNDO CAÍDO",
@@ -30,7 +31,8 @@ class MenuPrincipal(arcade.View):
             self.window.height - 150,
             arcade.color.WHITE,
             60,
-            anchor_x="center"
+            anchor_x="center",
+            font_name="Arial"
         )
 
         # Botones

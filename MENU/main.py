@@ -1,8 +1,11 @@
 import arcade
 from menu import MenuPrincipal
 
+ANCHO = 800
+ALTURA = 600
+
 def main():
-    window = arcade.Window(800, 600, title= "MUNDO CAIDO")
+    window = arcade.Window(ANCHO, ALTURA, title= "MUNDO CAIDO")
 
     menu = MenuPrincipal()
     window.show_view(menu)

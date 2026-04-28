@@ -2,7 +2,7 @@ import arcade
 from menu import MenuPrincipal
 
 def main():
-    window = arcade.Window(800, 600, title="Juego")
+    window = arcade.Window(800, 600, title= "MUNDO CAIDO")
 
     menu = MenuPrincipal()
     window.show_view(menu)

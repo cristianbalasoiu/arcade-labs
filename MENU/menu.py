@@ -36,9 +36,9 @@ class MenuPrincipal(arcade.View):
             self.window.width / 2,
             self.window.height - 150,
             arcade.color.VENETIAN_RED,
-            70,
+            80,
             anchor_x="center",
-            font_name="Georgia"
+            font_name="Impact"
         )
 
         # BOTÓN 1 (JUGAR)

@@ -9,7 +9,6 @@ class MenuPrincipal(arcade.View):
 
     def __init__(self):
         super().__init__()
-        self.botones = []
         arcade.set_background_color(arcade.color.BLACK_LEATHER_JACKET)
         
 
@@ -108,9 +107,7 @@ class MenuPrincipal(arcade.View):
         anchor_y="center",
         font_name="Times New Roman")
 
-        # Botones
-        for boton in self.botones:
-            boton.dibujar()
+
 
     def on_mouse_press(self, x, y, button, modifiers):
         center_x = self.window.width / 2

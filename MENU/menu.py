@@ -99,7 +99,7 @@ class MenuPrincipal(arcade.View):
 
         # TEXTO BOTÓN 3 (CONTROLES)
         arcade.draw_text(
-        "CONTROLES",
+        "AJUSTES",
         center_x,
         center_y - self.window.height * 0.335,  # centro del rectángulo 3
         arcade.color.GOLDENROD,

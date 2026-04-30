@@ -1,5 +1,7 @@
 import arcade
-from Boton import Boton
+from VistaJuego import VistaJuego
+from VistaHistoria import VistaHistoria
+from VistaAjustes import VistaAjustes
 
 
 
@@ -10,17 +12,6 @@ class MenuPrincipal(arcade.View):
         self.botones = []
         arcade.set_background_color(arcade.color.BLACK_LEATHER_JACKET)
         
-
-    def on_show(self):
-
-        ancho = 800
-        alto = 600
-
-        self.botones = [
-            Boton(ancho/2 - 150, alto/2 + 50, 300, 60, "JUGAR"),
-            Boton(ancho/2 - 150, alto/2 - 30, 300, 60, "HISTORIA"),
-            Boton(ancho/2 - 150, alto/2 - 110, 300, 60, "AJUSTES"),
-        ]
 
     def on_draw(self):
         self.clear()
@@ -122,6 +113,33 @@ class MenuPrincipal(arcade.View):
             boton.dibujar()
 
     def on_mouse_press(self, x, y, button, modifiers):
-        for boton in self.botones:
-            if boton.esta_pulsado(x, y):
-                print(f"Has pulsado: {boton.texto}")
+        center_x = self.window.width / 2
+        center_y = self.window.height / 2
+        half_width = self.window.width * 0.30
+        half_height = self.window.height * 0.06
+
+        # -------- BOTÓN JUGAR --------
+        left = center_x - half_width
+        right = center_x + half_width
+        bottom = center_y + self.window.height * 0.02 - half_height
+        top = center_y + self.window.height * 0.10 + half_height
+
+        if left <= x <= right and bottom <= y <= top:
+            self.window.show_view(VistaJuego())
+            return
+
+        # -------- BOTÓN HISTORIA --------
+        bottom = center_y - self.window.height * 0.16 - half_height
+        top = center_y - self.window.height * 0.14 + half_height
+
+        if left <= x <= right and bottom <= y <= top:
+            self.window.show_view(VistaHistoria())
+            return
+
+        # -------- BOTÓN AJUSTES --------
+        bottom = center_y - self.window.height * 0.35 - half_height
+        top = center_y - self.window.height * 0.32 + half_height
+
+        if left <= x <= right and bottom <= y <= top:
+            self.window.show_view(VistaAjustes())
+            return

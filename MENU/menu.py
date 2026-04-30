@@ -31,7 +31,7 @@ class MenuPrincipal(arcade.View):
             font_name="Impact"
         )
 
-        # BOTÓN 1 (JUGAR)
+        # BOTÓN JUGAR
 
         bottom1 = center_y + self.window.height * 0.02 - half_height
         top1 = center_y + self.window.height * 0.10 + half_height
@@ -46,7 +46,7 @@ class MenuPrincipal(arcade.View):
 
         arcade.draw_lrbt_rectangle_outline(center_x - half_width, center_x + half_width, bottom1, top1, arcade.color.VENETIAN_RED, 3)
 
-        # BOTÓN 2 (HISTORIA)
+        # BOTÓN HISTORIA
 
         bottom2 = center_y - self.window.height * 0.16 - half_height
         top2 = center_y - self.window.height * 0.14 + half_height
@@ -60,7 +60,7 @@ class MenuPrincipal(arcade.View):
 
         arcade.draw_lrbt_rectangle_outline(center_x - half_width, center_x + half_width, bottom2, top2, arcade.color.VENETIAN_RED, 3)
 
-        # BOTÓN 3 (AJUSTES)
+        # BOTÓN AJUSTES
 
         bottom3 = center_y - self.window.height * 0.35 - half_height
         top3 = center_y - self.window.height * 0.32 + half_height
@@ -74,7 +74,7 @@ class MenuPrincipal(arcade.View):
 
         arcade.draw_lrbt_rectangle_outline(center_x - half_width, center_x + half_width, bottom3, top3, arcade.color.VENETIAN_RED, 3)
 
-        # TEXTO BOTÓN 1 (JUGAR)
+        # TEXTO BOTÓN JUGAR
         arcade.draw_text(
         "JUGAR",
         center_x,
@@ -85,7 +85,7 @@ class MenuPrincipal(arcade.View):
         anchor_y="center",
         font_name="Times New Roman")
 
-        # TEXTO BOTÓN 2 (HISTORIA)
+        # TEXTO BOTÓN HISTORIA
         arcade.draw_text(
         "HISTORIA",
         center_x,
@@ -96,7 +96,7 @@ class MenuPrincipal(arcade.View):
         anchor_y="center",
         font_name="Times New Roman")
 
-        # TEXTO BOTÓN 3 (CONTROLES)
+        # TEXTO BOTÓN CONTROLES
         arcade.draw_text(
         "AJUSTES",
         center_x,
@@ -115,7 +115,7 @@ class MenuPrincipal(arcade.View):
         half_width = self.window.width * 0.30
         half_height = self.window.height * 0.06
 
-        # -------- BOTÓN JUGAR --------
+        # BOTÓN JUGAR
         left = center_x - half_width
         right = center_x + half_width
         bottom = center_y + self.window.height * 0.02 - half_height
@@ -125,7 +125,7 @@ class MenuPrincipal(arcade.View):
             self.window.show_view(VistaJuego())
             return
 
-        # -------- BOTÓN HISTORIA --------
+        # BOTÓN HISTORIA
         bottom = center_y - self.window.height * 0.16 - half_height
         top = center_y - self.window.height * 0.14 + half_height
 
@@ -133,7 +133,7 @@ class MenuPrincipal(arcade.View):
             self.window.show_view(VistaHistoria())
             return
 
-        # -------- BOTÓN AJUSTES --------
+        # BOTÓN AJUSTES
         bottom = center_y - self.window.height * 0.35 - half_height
         top = center_y - self.window.height * 0.32 + half_height
 

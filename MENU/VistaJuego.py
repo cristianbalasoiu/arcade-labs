@@ -34,12 +34,13 @@ class VistaJuego(arcade.View):
         
         # TEXTO SUPERIOR
         arcade.draw_text(
-            "Elige que partida quieres jugar", 
+            "OPCIONES DE PARTIDA", 
             self.window.width / 2, 
             self.window.height / 2 + 150, 
-            arcade.color.WHITE, 
+            arcade.color.GOLDENROD, 
             40, 
-            anchor_x="center"
+            anchor_x="center",
+            font_name = "Georgia"
         )
 
         #BOTONES DE PARTIDAS
@@ -50,7 +51,7 @@ class VistaJuego(arcade.View):
         y_seguir = self.window.height / 2 - 60
 
        
-        for y, texto in [(y_nueva, "NUEVA PARTIDA"), (y_seguir, "SEGUIR PARTIDA")]:
+        for y, texto in [(y_nueva, "NUEVA PARTIDA"), (y_seguir, "CONTINUAR PARTIDA")]:
             left_btn = center_x - boton_width / 2
             right_btn = center_x + boton_width / 2
             bottom_btn = y - boton_height / 2

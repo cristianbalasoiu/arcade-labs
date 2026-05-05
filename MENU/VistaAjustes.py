@@ -1,11 +1,29 @@
 import arcade
 
 class VistaAjustes(arcade.View):
+
+    def __init__(self):
+        super().__init__()
+
+        self.wasd_texture = arcade.load_texture("MENU/assets/wasd.png")
+
+        self.wasd_x = self.window.width // 2
+        self.wasd_y = 120
+
+        self.scale = 0.5
+
     def on_draw(self):
         self.clear()
         arcade.draw_text("AJUSTES", 400, 300, arcade.color.WHITE, 40, anchor_x="center")
 
-    # BOTÓN VOLVER
+        width = self.wasd_texture.width * self.scale
+        height = self.wasd_texture.height * self.scale
+
+        arcade.draw_texture_rect(
+        self.wasd_texture,
+        arcade.XYWH(self.wasd_x, self.wasd_y, width, height))
+
+        # BOTÓN VOLVER
         left = 20
         right = 200
         top = self.window.height - 20
